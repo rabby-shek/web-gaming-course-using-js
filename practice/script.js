@@ -5,7 +5,7 @@ const CANVAS_HEIGHT = (canvas.height = 600);
 
 const playerImg = new Image();
 playerImg.src = "./gl.jpg";
-const spritWidth =626 / 6 + 20;
+const spritWidth = 626 / 6 + 20;
 const spritHeight = 626 / 4 + 10;
 let frameX = 0;
 let frameY = 3;
@@ -17,7 +17,7 @@ function animate() {
     playerImg,
     4 * spritWidth,
     0,
-    spritWidth ,
+    spritWidth,
     spritHeight,
     0,
     0,
@@ -27,7 +27,6 @@ function animate() {
   if (gameFrame % staggerFrame == 0) {
     if (frameX < 6) frameX++;
     else frameX = 0;
-   
   }
   gameFrame++;
   requestAnimationFrame(animate);
