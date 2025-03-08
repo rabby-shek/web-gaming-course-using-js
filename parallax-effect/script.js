@@ -15,15 +15,22 @@ const backgroundLayer4 = new Image();
 backgroundLayer4.src = "./backgroundLayers/layer-4.png";
 const backgroundLayer5 = new Image();
 backgroundLayer5.src = "./backgroundLayers/layer-5.png";
-let x = 0;
+
+class layer {
+  constructor(image, speedModifier) {
+    this.x = 0;
+    this.y = 0;
+    this.width = 2400;
+    this.height = 700;
+    this.x2 = this.width;
+    this.image = image;
+    this.speedModifier = speedModifier;
+  }
+}
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  ctx.drawImage(backgroundLayer4, x, 0);
-  if( x < - 2400) x = 2400;
-  else x -= gameSpeed; 
-  
   requestAnimationFrame(animate);
-  
+
 }
 
 animate();
